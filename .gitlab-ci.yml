@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+    # 建立 public 資料夾，GitLab Pages 規定要放在這裡
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
