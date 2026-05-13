@@ -1,0 +1,66 @@
+/* style.css */
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* 活潑的字體 */
+    background-color: #f0f8ff;
+    text-align: center;
+    padding: 20px;
+}
+
+.video-container {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    border: 8px solid #ffcc00;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+.subtitle {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #ff6699;
+}
+
+.controls {
+    margin-top: 30px;
+}
+
+button {
+    font-size: 24px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#startBtn { background-color: #4CAF50; color: white; }
+#shadowBtn { background-color: #2196F3; color: white; }
+#nextBtn { background-color: #ff3366; color: white; font-size: 32px; animation: bounce 1s infinite; }
+
+/* 讓 Next 按鈕微微跳動吸引點擊 */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
