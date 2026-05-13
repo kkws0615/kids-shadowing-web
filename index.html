@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兒童英文跟讀網</title>
+    <!-- 連結樣式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 影片區域 -->
+        <div class="video-container">
+            <!-- 請確保影片檔名與這裡的 src 一致 -->
+            <video id="mainVideo" width="640" playsinline>
+                <source src="your-video-file.mp4" type="video/mp4">
+                您的瀏覽器不支援影片播放。
+            </video>
+            <!-- 覆蓋在影片上的動態字幕 -->
+            <div id="subtitle" class="subtitle">準備好後請按開始</div>
+        </div>
+
+        <!-- 控制按鈕區域 -->
+        <div class="controls">
+            <button id="startBtn">開始觀看 (Watch)</button>
+            <button id="shadowBtn">開啟跟讀 (Shadow)</button>
+            <br>
+            <!-- Next 按鈕預設隱藏，由 JS 控制顯示 -->
+            <button id="nextBtn" style="display: none;">NEXT ➔</button>
+        </div>
+    </div>
+
+    <!-- 連結執行邏輯的腳本 -->
+    <script src="script.js"></script>
+</body>
+</html>
